@@ -1,4 +1,5 @@
 * 100个gdb小技巧:https://wizardforcel.gitbooks.io/100-gdb-tips/content/
+* Debugging with GDB:https://sourceware.org/gdb/onlinedocs/gdb/index.html
 * gdbinit - GDB initialization scripts:https://www.linux.org/docs/man5/gdbinit.html
  
  (gdb) help set height
@@ -15,13 +16,21 @@ Setting this to zero causes GDB never pause during output.
   set pagination off
   set print repeats 16
   ```
-  (gdb) help set print pretty
+  (gdb) help set print repeats
+Set threshold for repeated print elements.
+"set print repeats 0" causes all elements to be individually printed.
+
+ #21 0x0000000000506f3b in ngx_http_v2_state_headers (h2c=0x7f0b5220d800, pos=0x7f0b596e500e "\202", <incomplete sequence \355\207>,
+    end=0x7f0b596e5056 "\214g\210\325\316z\213\023\253\204+\203\202\303\302\017\032\220\344\307\362!\210K\005\306\334jWC!Z\376\177\301\300\277\276\301\300\277\276", '\020' <repeats 16 times>, "\177\a\027\361\374:&\234\003\240\023\313\364\256o\354\353\276\351\350\347\346", <incomplete sequence \345>) at src/http/v2/ngx_http_v2.c:1318
+    
+ (gdb) help set print pretty
 Set prettyprinting of structures.
 (gdb) help set pagination
 Set state of GDB output pagination.
 When pagination is ON, GDB pauses at end of each screenful of
 its output and asks you whether to continue.
 Turning pagination off is an alternative to "set height 0".
+
 ```
 (gdb) help set print
 Generic command for setting how things print.
