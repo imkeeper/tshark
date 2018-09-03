@@ -64,7 +64,7 @@ set print vtbl -- Set printing of C++ virtual function tables
 Type "help set print" followed by set print subcommand name for full documentation.
 Type "apropos word" to search for commands related to "word".
 ```
-
+```
 whatis   #察看变量类型
 ptype    #察看类型的定义
 bt  [full]    #查看堆栈[详细]
@@ -88,3 +88,4 @@ frame [num]   #显示当前[或指定num]的堆栈。
     tty命令可以指写输入输出的终端设备。如：tty /dev
 5、
 checkpoint   ＃设置程序的快照 
+```
