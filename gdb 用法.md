@@ -64,3 +64,27 @@ set print vtbl -- Set printing of C++ virtual function tables
 Type "help set print" followed by set print subcommand name for full documentation.
 Type "apropos word" to search for commands related to "word".
 ```
+
+whatis   #察看变量类型
+ptype    #察看类型的定义
+bt  [full]    #查看堆栈[详细]
+frame [num]   #显示当前[或指定num]的堆栈。
+--------------------------------------------------------------------
+在gdb中，运行程序使用r或是run命令。程序的运行，你有可能需要设置下面四方面的事。
+1、程序运行参数。
+    set args 可指定运行时参数。（如：set args 10 20 30 40 50）
+    show args 命令可以查看设置好的运行参数。
+2、运行环境。
+    path <dir> 可设定程序的运行路径。
+    show paths 查看程序的运行路径。
+    set environment varname [=value] 设置环境变量。如：set env USER=hchen
+    show environment [varname] 查看环境变量。
+3、工作目录。
+    cd <dir> 相当于shell的cd命令。
+    pwd 显示当前的所在目录。
+4、程序的输入输出。
+    info terminal 显示你程序用到的终端的模式。
+    使用重定向控制程序输出。如：run > outfile
+    tty命令可以指写输入输出的终端设备。如：tty /dev
+5、
+checkpoint   ＃设置程序的快照 
