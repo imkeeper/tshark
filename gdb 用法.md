@@ -65,6 +65,7 @@ Type "help set print" followed by set print subcommand name for full documentati
 Type "apropos word" to search for commands related to "word".
 ```
 ```
+https://blog.csdn.net/dyoldfish/article/details/1752681
 whatis   #察看变量类型
 ptype    #察看类型的定义
 bt  [full]    #查看堆栈[详细]
