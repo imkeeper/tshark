@@ -65,6 +65,15 @@ Type "help set print" followed by set print subcommand name for full documentati
 Type "apropos word" to search for commands related to "word".
 ```
 ```
+Breakpoint Command Lists:https://sourceware.org/gdb/onlinedocs/gdb/Break-Commands.html
+You can give any breakpoint (or watchpoint or catchpoint) a series of commands to execute when your program stops due to that breakpoint. For example, you might want to print the values of certain expressions, or enable other breakpoints.
+
+commands [list…]
+… command-list …
+end
+```
+
+```
 https://blog.csdn.net/dyoldfish/article/details/1752681
 whatis   #察看变量类型
 ptype    #察看类型的定义
