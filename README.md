@@ -23,6 +23,28 @@
 5. tshark -q -X lua_script:cutflow.lua -r wireshark.pcap
 ```
 
+```
+二.具体使用案例
+
+1.抓取500个包,提取访问的网址打印出来
+tshark -s 0 -i eth0 -n -f 'tcp dst port 80' -R 'http.host and http.request.uri' -T fields -e http.host -e http.request.uri -l -c 50
+
+2.抓取500个包,提取访问者访问地址及提交方式和访问者ip
+tshark -s 0 -i eth0 -n -f 'tcp dst port 80' -R 'http.host and http.request.uri' -T fields -e frame.time -e ip.src -e http.request.method -e http.host -e http.request.uri -e ip.src -e ip.dst -l -c 500
+
+3.抓取mysql的查询
+tshark -i eth1 -d tcp.port==3306,mysql -T fields -e mysql.query 'port 3306'
+tshark -i lo -d tcp.port==3306,mysql -T fields -e mysql.query 'port 3306'
+
+指定类型
+tshark -i lo -d tcp.port==3306,mysql -T fields -e mysql.query 'port 3306' -R 'mysql matches "SELECT|INSERT|DELETE|UPDATE"'
+
+4.统计http状态
+tshark -n -q -z http,stat, -z http,tree
+
+
+```
+
 ### tshark lua教程
 * [Wireshark Lua Wiki]https://wiki.wireshark.org/Lua/）
 * [Wireshark Wiki](https://wiki.wireshark.org/FrontPage)
