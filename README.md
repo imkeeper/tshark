@@ -56,6 +56,8 @@ tshark -n -q -z http,stat, -z http,tree
 ](https://zhuanlan.zhihu.com/p/35188803)
 
 * [tshark批量切流实践和思考](https://blog.csdn.net/javajiawei/article/details/52423573)
+* [editcap的使用](https://www.cnblogs.com/hushaojun/p/7680350.html)
+* [使用tshark在命令行进行网络抓包](https://kaimingwan.com/post/ji-chu-zhi-shi/wang-luo/shi-yong-tsharkzai-ming-ling-xing-jin-xing-wang-luo-zhua-bao)
 
 ## Manual
 ```
